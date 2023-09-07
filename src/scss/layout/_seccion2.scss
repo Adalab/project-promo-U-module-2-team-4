@@ -4,6 +4,9 @@
   justify-content: center;
   align-items: center;
   gap: 4rem;
+  @media (min-width: 768px) {
+    gap: 18rem;
+  }
 
   &__list {
     width: 80%;
