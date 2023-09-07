@@ -10,7 +10,7 @@
   border: solid 0.1rem $white-three;
   background-color: $white-two;
 
-  @media all and (min-width: 768x) {
+  @media all and (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
     height: 6vh;
