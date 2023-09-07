@@ -1,9 +1,8 @@
 .section {
-background-color: $white-four;
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
 
     &__article {
         &--h1 {
