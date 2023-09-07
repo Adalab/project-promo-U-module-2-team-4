@@ -11,6 +11,11 @@
             font-weight: $black;
             color: $primary-color;
             font-size: 1.92rem;
+            
+            @media (min-width: 768px) {
+                font-size: 2.4rem;
+                max-width: 77rem;
+            }
         }
 
         &--p {
@@ -21,6 +26,11 @@
             max-width: 32rem;
             padding-left: 2vw;
             padding-right: 2vw;
+            
+            @media (min-width: 768px) {
+                font-size: 1.6rem;
+                max-width: 77rem;
+            }
 
         }
     }
