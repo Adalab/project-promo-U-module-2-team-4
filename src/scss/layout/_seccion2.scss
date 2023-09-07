@@ -3,11 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 5rem;
   @media (min-width: 768px) {
     gap: 19rem;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     gap: 10rem;
   }
 
