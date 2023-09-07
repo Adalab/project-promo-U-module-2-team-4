@@ -1,0 +1,56 @@
+.sectionTwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  &__list {
+    width: 80%;
+    height: 7.38rem;
+    margin-top: 2rem;
+    border: 0.1rem solid $primary-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+
+    &__icon {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      text-align: center;
+      width: 6rem;
+      height: 4.8rem;
+
+      &--text {
+        font-size: $font-size;
+        font-family: $font-open;
+        color: $gunmetal;
+      }
+
+      .fa-2xl {
+        color: $primary-color;
+      }
+    }
+  }
+
+  &__button {
+    border: 0.1rem solid $dirty-blue;
+    background-color: $dirty-blue;
+    color: white;
+    text-decoration: none;
+    font-family: $font-open;
+    font-weight: $semi-bold;
+    text-transform: uppercase;
+    width: 12.9rem;
+    height: 4.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3rem;
+  }
+}
