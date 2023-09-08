@@ -13,5 +13,17 @@
   }
 }
 .headerCP {
-  background-color: red;
+  height: 12vh;
+  background-color: $white-two;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+    padding-left: 4rem;
+  }
+  .img {
+    height: 50px;
+    width: 200px;
+  }
 }
