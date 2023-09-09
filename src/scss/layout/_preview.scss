@@ -1,0 +1,119 @@
+.sectionP {
+  width: 100vw;
+  height: 45.7rem;
+  background-image: linear-gradient(to bottom, $silver, $pale-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    width: 32.9rem;
+    height: 82.6rem;
+    margin: 1rem;
+    border-radius: 0.4rem;
+  }
+
+  .preview {
+    width: 24rem;
+    height: 38rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    &__reset {
+      width: 7.5rem;
+      height: 3rem;
+      color: $gunmetal;
+      border: 0.1rem solid $white-two;
+      border-radius: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem;
+
+      &--input {
+        border: none;
+        text-transform: uppercase;
+        font-family: $font-open;
+        color: $gunmetal;
+        background-color: $silver;
+        font-size: 1.2rem;
+      }
+    }
+
+    &__container {
+      width: 24rem;
+      height: 33rem;
+      background-color: $white-two;
+      box-shadow: 0 1px 10px 0 $black-20, 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+      border-radius: 0.2rem;
+
+      &--info {
+        height: 7.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding-bottom: 1rem;
+
+        .cajaBorde {
+          border-left: 0.5rem solid $dark-green-blue;
+          padding-left: 1rem;
+          .name {
+            font-family: $font-montse;
+            font-weight: bold;
+            font-size: 1.8rem;
+            color: $dark-green-blue;
+          }
+          .text {
+            font-family: $font-montse;
+            font-size: 1.6rem;
+            color: $gunmetal;
+          }
+        }
+      }
+
+      &--img {
+        width: 100%;
+        height: 20rem;
+
+        .pic {
+          width: 100%;
+          height: 20rem;
+        }
+      }
+
+      &--icons {
+        width: 100%;
+        height: 5.4rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style: none;
+        gap: 1rem;
+        padding-left: 2rem;
+
+        .iconBorder {
+          border: 0.2rem solid $hospital-green;
+          width: 3.2rem;
+          height: 3.2rem;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          padding: 1rem;
+
+          .iconP {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $dark-green-blue;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
