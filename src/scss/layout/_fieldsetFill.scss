@@ -1,0 +1,53 @@
+.fieldset {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 20px;
+  border-bottom: $white-three solid 1px;
+  padding-bottom: 30px;
+
+  &__legend {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--title {
+      @include fontFieldset(1.8rem, $gunmetal);
+      font-weight: $semi-bold;
+      text-transform: uppercase;
+      &--icon {
+        color: $primary-color;
+        padding-right: 1rem;
+      }
+    }
+    &--arrow {
+      color: $gunmetal;
+    }
+  }
+  &__label {
+    @include fontFieldset(1.4rem, $dark-green-blue);
+    padding-bottom: 0.7rem;
+  }
+  &__input {
+    margin-bottom: 2rem;
+    border: solid 1px $hospital-green;
+    @include fontFieldset(1.4rem, $dark-green-blue);
+    padding: 5px;
+    ::placeholder {
+      color: $pinkish-grey;
+    }
+  }
+  &__button {
+    margin-bottom: 2rem;
+    height: 30px;
+    width: 140px;
+    background-color: $primary-color;
+    border: none;
+    @include fontFieldset(1.4rem, $white-two);
+    border-radius: 3px;
+    box-shadow: 0 0 4px 0 $black-32;
+  }
+}

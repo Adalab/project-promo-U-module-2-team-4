@@ -1,7 +1,15 @@
 .body {
   background-color: $white-four;
 }
-
+.bodyCP {
+  background-color: $white-two;
+}
 .main {
   height: 50vh;
+}
+.mainCP {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
