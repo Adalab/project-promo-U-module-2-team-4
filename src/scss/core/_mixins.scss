@@ -1,0 +1,5 @@
+@mixin fontFieldset($fontSize, $color) {
+  font-family: $font-open;
+  font-size: $fontSize;
+  color: $color;
+}
