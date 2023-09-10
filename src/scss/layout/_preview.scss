@@ -1,6 +1,6 @@
 .sectionP {
   width: 100vw;
-  height: 45.7rem;
+  padding-block: 4rem;
   background-image: linear-gradient(to bottom, $silver, $pale-grey);
   display: flex;
   flex-direction: column;
@@ -8,8 +8,6 @@
   align-items: center;
 
   @media (min-width: 768px) {
-    width: 32.9rem;
-    height: 82.6rem;
     margin: 1rem;
     border-radius: 0.4rem;
   }
