@@ -8,9 +8,13 @@
   align-items: center;
 
   @media (min-width: 768px) {
-    margin: 1rem;
+    
     border-radius: 0.4rem;
+    width: 40%;
   }
+  @media (min-width: 1024px) {
+    width: 60%;
+}
 
   .preview {
     width: 24rem;

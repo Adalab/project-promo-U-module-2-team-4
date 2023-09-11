@@ -8,8 +8,18 @@
   height: 50vh;
 }
 .mainCP {
+  
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
-  }
+    background-image: linear-gradient(to bottom, $white-four, $white-two 9%);
+    padding: 2rem 4rem;
+    height: 100vh;
 }
+  }
+
+  .collapsed {
+    display: none;
+  }
+
+//añadir clase para legen collapsed
