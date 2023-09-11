@@ -1,110 +1,99 @@
-.fieldset__legend--title {
-    margin-top: 27px;
-}
-
 .design {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 320px;
-    height: 224px;
-    border-bottom: solid 1px $white-three;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .colortext {
-    text-transform: uppercase;
-    font-family: $font-open;
-    font-size: 1.4rem;
-    margin-left: 39px;
-    margin-top: 73px;
+  text-transform: uppercase;
+  font-family: $font-open;
+  font-size: 1.4rem;
 }
 
 #option1 {
-    width: 17px;
-    height: 17px;
-    margin-right: 10px;
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
 }
 
 .color1 {
-    display: flex;
-    margin-bottom: 20px;
-    margin-top: 79px;
-    justify-content: right;
-
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: right;
 }
 
 .option1color1 {
-    width: 30px;
-    height: 25px;
-    background-color: $dark-green-blue;
+  width: 30px;
+  height: 25px;
+  background-color: $dark-green-blue;
 }
 
 .option1color2 {
-    width: 30px;
-    height: 25px;
-    background-color: $dirty-blue;
+  width: 30px;
+  height: 25px;
+  background-color: $dirty-blue;
 }
 
 .option1color3 {
-    width: 30px;
-    height: 25px;
-    background-color: $hospital-green;
+  width: 30px;
+  height: 25px;
+  background-color: $hospital-green;
 }
 
 .color2 {
-    display: flex;
-    margin-bottom: 20px;
-    justify-content: right;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: right;
 }
 
 #option2 {
-    width: 17px;
-    height: 17px;
-    margin-right: 10px;
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
 }
 
 .option2color1 {
-    width: 30px;
-    height: 25px;
-    background-color: $dried-blood;
+  width: 30px;
+  height: 25px;
+  background-color: $dried-blood;
 }
 
 .option2color2 {
-    width: 30px;
-    height: 25px;
-    background-color: $rusty-red;
+  width: 30px;
+  height: 25px;
+  background-color: $rusty-red;
 }
 
 .option2color3 {
-    width: 30px;
-    height: 25px;
-    background-color: $tomato;
+  width: 30px;
+  height: 25px;
+  background-color: $tomato;
 }
 
 .color3 {
-    display: flex;
-    justify-content: right;
+  display: flex;
+  justify-content: right;
 }
 
 #option3 {
-    width: 17px;
-    height: 17px;
-    margin-right: 10px;
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
 }
 
 .option3color1 {
-    width: 30px;
-    height: 25px;
-    background-color: $slate;
+  width: 30px;
+  height: 25px;
+  background-color: $slate;
 }
 
 .option3color2 {
-    width: 30px;
-    height: 25px;
-    background-color: $faded-orange;
+  width: 30px;
+  height: 25px;
+  background-color: $faded-orange;
 }
 
 .option3color3 {
-    width: 30px;
-    height: 25px;
-    background-color: $light-grey-blue;
+  width: 30px;
+  height: 25px;
+  background-color: $light-grey-blue;
 }
