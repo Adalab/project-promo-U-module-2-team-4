@@ -1,5 +1,4 @@
 .fieldset3 {
-  
 
   
   &__container {
@@ -37,9 +36,7 @@
       align-items: center;
       justify-content: center;
       &_p {
-        font-family: $font-open;
-        font-size: 1.8rem;
-        color: $gunmetal;
+        @include fontFieldset (1.8rem, $gunmetal);
         font-weight: 600;
         margin-top: 2rem;
       }
@@ -53,9 +50,7 @@
         background-color: $azure;
         border-radius: 0.3rem;
         box-shadow: 0 0 0.4rem 0 $black-32;
-        font-family: $font-open;
-        color: $white-two;
-        font-size: 1.4rem;
+        @include fontFieldset (1.4rem, $white-two);
         line-height: 1.43;
         margin-top: 1vh;
         padding: 0.5rem;
