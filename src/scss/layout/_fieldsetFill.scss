@@ -4,8 +4,8 @@
   flex-direction: column;
   margin-inline: 20px;
   border-bottom: $white-three solid 1px;
- 
-  @media (min-width: 768px){
+
+  @media (min-width: 768px) {
     margin-left: 0;
   }
 
@@ -14,9 +14,7 @@
     width: 100%;
     padding-top: 10px;
     padding-bottom: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include dflex(row, space-between, center);
 
     &--title {
       @include fontFieldset(1.8rem, $gunmetal);
@@ -30,35 +28,34 @@
     &--arrow {
       color: $gunmetal;
     }
-    
   }
   &__form {
     display: flex;
     flex-direction: column;
     padding-bottom: 30px;
 
-  &--label {
-    @include fontFieldset(1.4rem, $dark-green-blue);
-    padding-bottom: 0.7rem;
-  }
-  &--input {
-    margin-bottom: 2rem;
-    border: solid 1px $hospital-green;
-    @include fontFieldset(1.4rem, $dark-green-blue);
-    padding: 5px;
-    ::placeholder {
-      color: $pinkish-grey;
+    &--label {
+      @include fontFieldset(1.4rem, $dark-green-blue);
+      padding-bottom: 0.7rem;
+    }
+    &--input {
+      margin-bottom: 2rem;
+      border: solid 1px $hospital-green;
+      @include fontFieldset(1.4rem, $dark-green-blue);
+      padding: 5px;
+      ::placeholder {
+        color: $pinkish-grey;
+      }
+    }
+    &--button {
+      margin-bottom: 2rem;
+      height: 30px;
+      width: 140px;
+      background-color: $primary-color;
+      border: none;
+      @include fontFieldset(1.4rem, $white-two);
+      border-radius: 3px;
+      box-shadow: 0 0 4px 0 $black-32;
     }
   }
-  &--button {
-    margin-bottom: 2rem;
-    height: 30px;
-    width: 140px;
-    background-color: $primary-color;
-    border: none;
-    @include fontFieldset(1.4rem, $white-two);
-    border-radius: 3px;
-    box-shadow: 0 0 4px 0 $black-32;
-  }
-}
 }

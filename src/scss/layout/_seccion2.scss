@@ -1,8 +1,5 @@
 .sectionTwo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include dflex(column, center, center);
   gap: 5rem;
   @media (min-width: 768px) {
     gap: 19rem;
@@ -17,10 +14,7 @@
     margin-top: 2rem;
     border: 0.2rem solid rgba(225, 115, 52, 0.21);
     border-radius: 0.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include dflex(row, center, center);
     gap: 2.5rem;
     @media (min-width: 768px) {
       width: 50%;
@@ -29,18 +23,14 @@
 
     &__icon {
       list-style: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      @include dflex(column, center, none);
       gap: 1rem;
       text-align: center;
       width: 6rem;
       height: 4.8rem;
 
       &--text {
-        font-size: $font-size;
-        font-family: $font-open;
-        color: $gunmetal;
+        @include fontFieldset($font-size, $gunmetal);
       }
 
       .fa-2xl {
@@ -52,17 +42,13 @@
   &__button {
     border: 0.1rem solid $dirty-blue;
     background-color: $dirty-blue;
-    color: white;
     text-decoration: none;
-    font-family: $font-open;
+    @include fontFieldset(1.6rem, white);
     font-weight: $semi-bold;
     text-transform: uppercase;
-    font-size: 1.6rem;
     width: 12.9rem;
     height: 4.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include dflex(row, center, center);
     border-radius: 3rem;
   }
 }

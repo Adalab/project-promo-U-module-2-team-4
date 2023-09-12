@@ -1,7 +1,5 @@
 .headerIndex {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  @include dflex(row, center, flex-end);
   height: 30vh;
   @media (min-width: 768px) {
     height: 40vh;
@@ -15,9 +13,7 @@
 .headerCP {
   height: 12vh;
   background-color: $white-two;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include dflex(row, center, center);
   @media (min-width: 768px) {
     justify-content: flex-start;
     padding-left: 4rem;

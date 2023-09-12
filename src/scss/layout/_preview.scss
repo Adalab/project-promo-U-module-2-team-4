@@ -23,9 +23,7 @@
       padding: 0.5rem 1rem;
       text-transform: uppercase;
       background-color: transparent;
-      font-size: 1.2rem;
-      font-family: $font-open;
-      color: $gunmetal;
+      @include fontFieldset(1.2rem, $gunmetal);
       margin-bottom: 3rem;
     }
 

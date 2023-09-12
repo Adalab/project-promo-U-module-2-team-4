@@ -1,15 +1,9 @@
 .fieldset3 {
-
-  
   &__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include dflex(column, center, center);
     padding-bottom: 30px;
 
     &--button {
-      
       background-color: $primary-color;
       border-radius: 1.2rem;
       padding: 1.3rem 1.8rem 1.3rem 1.7rem;
@@ -18,10 +12,8 @@
 
       &_a {
         padding: 1.3rem 1.8rem 1.3rem 1.7rem;
-        color: $white-two;
+        @include fontFieldset(1.8rem, $white-two);
         text-decoration: none;
-        font-family: $font-open;
-        font-size: 1.8rem;
         text-transform: uppercase;
       }
     }
@@ -31,17 +23,14 @@
     }
 
     &--created {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      @include dflex(column, center, center);
       &_p {
-        @include fontFieldset (1.8rem, $gunmetal);
+        @include fontFieldset(1.8rem, $gunmetal);
         font-weight: 600;
         margin-top: 2rem;
       }
       &_link {
-        @include fontFieldset (1.2rem, $primary-color);
+        @include fontFieldset(1.2rem, $primary-color);
         font-weight: 600;
         text-align: center;
         margin: 0.5rem;
@@ -50,7 +39,7 @@
         background-color: $azure;
         border-radius: 0.3rem;
         box-shadow: 0 0 0.4rem 0 $black-32;
-        @include fontFieldset (1.4rem, $white-two);
+        @include fontFieldset(1.4rem, $white-two);
         line-height: 1.43;
         margin-top: 1vh;
         padding: 0.5rem;
@@ -58,9 +47,8 @@
     }
   }
 }
-          
 
 .fa-address-card {
-    color: $white-two;
-    font-size: 1.8rem;
+  color: $white-two;
+  font-size: 1.8rem;
 }
