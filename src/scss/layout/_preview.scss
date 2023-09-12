@@ -1,5 +1,4 @@
 .sectionP {
-  width: 100vw;
   padding-block: 4rem;
   background-image: linear-gradient(to bottom, $silver, $pale-grey);
   @include dflex(column, center, center);
@@ -13,8 +12,6 @@
   }
 
   .preview {
-    // width: 24rem;
-
     &__reset {
       border: 0.1rem solid $white-two;
       border-radius: 2rem;
@@ -25,6 +22,7 @@
       background-color: transparent;
       @include fontFieldset(1.2rem, $gunmetal);
       margin-bottom: 3rem;
+      cursor: pointer;
     }
 
     &__container {
@@ -38,16 +36,16 @@
         padding-bottom: 1rem;
         padding-top: 2rem;
 
-        .cajaBorde {
+        .personal-info {
           border-left: 0.5rem solid $dark-green-blue;
           padding-left: 1rem;
-          .name {
+          .fullname {
             font-family: $font-montse;
             font-weight: bold;
             font-size: 1.8rem;
             color: $dark-green-blue;
           }
-          .text {
+          .job {
             font-family: $font-montse;
             font-size: 1.6rem;
             color: $gunmetal;
