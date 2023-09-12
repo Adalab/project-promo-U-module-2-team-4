@@ -17,9 +17,17 @@
     height: 100vh;
 }
   }
+  
 
   .collapsed {
-    display: none;
-  }
+    .fieldset__legend{
+      &--arrow {
+        transform: rotate(180deg);
+      }
 
-//añadir clase para legen collapsed
+    }
+    .design, .fieldset__form, .fieldset3__container{
+    display: none;
+    }
+}
+
