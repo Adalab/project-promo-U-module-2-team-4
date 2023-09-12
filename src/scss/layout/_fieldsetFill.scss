@@ -4,7 +4,10 @@
   flex-direction: column;
   margin-inline: 20px;
   border-bottom: $white-three solid 1px;
-  padding-bottom: 30px;
+ 
+  @media (min-width: 768px){
+    margin-left: 0;
+  }
 
   &__legend {
     width: 100%;
@@ -26,12 +29,18 @@
     &--arrow {
       color: $gunmetal;
     }
+    
   }
-  &__label {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+
+  &--label {
     @include fontFieldset(1.4rem, $dark-green-blue);
     padding-bottom: 0.7rem;
   }
-  &__input {
+  &--input {
     margin-bottom: 2rem;
     border: solid 1px $hospital-green;
     @include fontFieldset(1.4rem, $dark-green-blue);
@@ -40,7 +49,7 @@
       color: $pinkish-grey;
     }
   }
-  &__button {
+  &--button {
     margin-bottom: 2rem;
     height: 30px;
     width: 140px;
@@ -50,4 +59,5 @@
     border-radius: 3px;
     box-shadow: 0 0 4px 0 $black-32;
   }
+}
 }

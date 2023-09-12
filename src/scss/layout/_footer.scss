@@ -18,10 +18,8 @@
 }
 
 .copy {
-  font-family: $font-open;
-  font-size: 1.4rem;
+  @include fontFieldset(1.4rem, $brownish-grey);
   line-height: 2rem;
-  color: $brownish-grey;
   opacity: 0.5;
 }
 

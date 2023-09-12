@@ -3,3 +3,10 @@
   font-size: $fontSize;
   color: $color;
 }
+
+@mixin dflex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
