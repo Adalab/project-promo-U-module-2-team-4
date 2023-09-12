@@ -32,20 +32,17 @@ function closeShare() {
 }
 
 function handleClickDesignLegend() {
-  console.log('holi');
   closeFill();
   closeShare();
   openDesign();
 }
 function handleClickFillLegend() {
-  console.log('holi2');
   closeShare();
   closeDesign();
   openFill();
 }
 
 function handleClickShareLegend() {
-  console.log('holi3');
   closeFill();
   closeDesign();
   openShare();
