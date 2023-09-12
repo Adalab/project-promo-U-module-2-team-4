@@ -23,21 +23,15 @@
 }
 
 .option1color1 {
-  width: 30px;
-  height: 25px;
-  background-color: $dark-green-blue;
+  @include square($dark-green-blue);
 }
 
 .option1color2 {
-  width: 30px;
-  height: 25px;
-  background-color: $dirty-blue;
+  @include square($dirty-blue);
 }
 
 .option1color3 {
-  width: 30px;
-  height: 25px;
-  background-color: $hospital-green;
+  @include square($hospital-green);
 }
 
 .color2 {
@@ -53,21 +47,15 @@
 }
 
 .option2color1 {
-  width: 30px;
-  height: 25px;
-  background-color: $dried-blood;
+  @include square($dried-blood);
 }
 
 .option2color2 {
-  width: 30px;
-  height: 25px;
-  background-color: $rusty-red;
+  @include square($rusty-red);
 }
 
 .option2color3 {
-  width: 30px;
-  height: 25px;
-  background-color: $tomato;
+  @include square($tomato);
 }
 
 .color3 {
@@ -82,19 +70,14 @@
 }
 
 .option3color1 {
-  width: 30px;
-  height: 25px;
-  background-color: $slate;
+  @include square($slate);
+
 }
 
 .option3color2 {
-  width: 30px;
-  height: 25px;
-  background-color: $faded-orange;
+  @include square($faded-orange);
 }
 
 .option3color3 {
-  width: 30px;
-  height: 25px;
-  background-color: $light-grey-blue;
+  @include square($light-grey-blue);
 }

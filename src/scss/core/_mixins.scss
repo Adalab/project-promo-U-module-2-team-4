@@ -10,3 +10,9 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin square($background-color) {
+  width: 30px;
+  height: 25px;
+  background-color: $background-color;
+}
