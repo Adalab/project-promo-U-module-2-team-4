@@ -14,6 +14,12 @@ const inputJob = document.querySelector('.js-input-job');
 const previewJob = document.querySelector('.js-preview-job');
 const inputEmail = document.querySelector('.js-input-email');
 const previewEmail = document.querySelector('.js-preview-email');
+const inputPhone = document.querySelector('.js-input-phone');
+const previewPhone = document.querySelector('.js-preview-phone');
+const inputLinkedin = document.querySelector('.js-input-linkedin');
+const previewLinkedin = document.querySelector('.js-preview-linkedin');
+const inputGitHub = document.querySelector('.js-input-GitHub');
+const previewGitHub = document.querySelector('.js-preview-GitHub');
 
 const btnDelete = document.querySelector('.js-btn-delete');
 
@@ -57,34 +63,63 @@ function handleClickShareLegend() {
   openShare();
 }
 
-const fillName = () => (previewName.innerHTML = 'Nombre Apellido');
+const fillDefaultName = () => (previewName.innerHTML = 'Nombre Apellido');
 
-const fillJob = () => (previewJob.innerHTML = 'Front-end developer');
+const fillDefaultJob = () => (previewJob.innerHTML = 'Front-end developer');
+
+const fillName = () => (previewName.innerHTML = inputName.value);
+
+const fillJob = () => {
+  previewJob.innerHTML = inputJob.value;
+};
 
 const fillEmail = () => {
   previewEmail.href = `mailto:${inputEmail.value}`;
 };
 
+const fillPhone = () => {
+  previewPhone.href = `tel:${inputPhone.value}`;
+};
+const fillLinkedin = () => {
+  previewLinkedin.href = `https://www.${inputLinkedin.value}/`;
+};
+
+const fillGitHub = () => {
+  previewGitHub.href = `https://github.com/${inputGitHub.value}`;
+};
+//Que pasa si ponen @???
+
 function handleInput() {
   if (inputName.value === '') {
-    fillName();
+    fillDefaultName();
   } else {
-    previewName.innerHTML = inputName.value;
+    fillName();
   }
 
   if (inputJob.value === '') {
-    fillJob();
+    fillDefaultJob();
   } else {
-    previewJob.innerHTML = inputJob.value;
+    fillJob();
   }
   fillEmail();
+  fillPhone();
+  fillLinkedin();
+  fillGitHub();
 }
 
 function handleClickDelete() {
   inputName.value = '';
   inputJob.value = '';
-  fillName();
-  fillJob();
+  inputEmail.value = '';
+  previewEmail.href = '#';
+  inputPhone.value = '';
+  previewPhone.href = '#';
+  inputLinkedin.value = '';
+  previewLinkedin.href = '#';
+  inputGitHub.value = '';
+  previewGitHub.href = '#';
+  fillDefaultName();
+  fillDefaultJob();
 }
 
 //Eventos
