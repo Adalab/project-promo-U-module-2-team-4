@@ -1,33 +1,61 @@
 .body {
   background-color: $white-four;
 }
+
 .bodyCP {
   background-color: $white-two;
 }
+
 .main {
   height: 50vh;
 }
+
 .mainCP {
-  
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
     background-image: linear-gradient(to bottom, $white-four, $white-two 9%);
     padding: 2rem 4rem;
     height: 100vh;
-}
   }
-  
+}
 
-  .collapsed {
-    .fieldset__legend{
-      &--arrow {
-        transform: rotate(180deg);
+.collapsed {
+  .fieldset__legend {
+    &--arrow {
+      transform: rotate(180deg);
+    }
+  }
+
+  .design,
+  .fieldset__form,
+  .fieldset3__container {
+    display: none;
+  }
+}
+
+.bluecolors {
+  .preview__container--info {
+    .personal-info {
+      border-left: 0.5rem solid $dirty-blue;
+
+      .fullname {
+        color: $dark-green-blue;
       }
 
+      .job {
+        color: $gunmetal;
+      }
     }
-    .design, .fieldset__form, .fieldset3__container{
-    display: none;
-    }
-}
+  }
 
+  .preview__container--icons {
+    .iconBorder {
+      border: 0.2rem solid $hospital-green;
+
+      .iconP {
+        color: $dark-green-blue;
+      }
+    }
+  }
+}
