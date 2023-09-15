@@ -16,7 +16,6 @@
     flex-direction: row-reverse;
     background-image: linear-gradient(to bottom, $white-four, $white-two 9%);
     padding: 2rem 4rem;
-    height: 100vh;
   }
 }
 
@@ -42,10 +41,6 @@
       .fullname {
         color: $dark-green-blue;
       }
-
-      .job {
-        color: $gunmetal;
-      }
     }
   }
 
@@ -55,6 +50,50 @@
 
       .iconP {
         color: $dark-green-blue;
+      }
+    }
+  }
+}
+
+.redcolors {
+  .preview__container--info {
+    .personal-info {
+      border-left: 0.5rem solid $rusty-red;
+
+      .fullname {
+        color: $dried-blood;
+      }
+    }
+  }
+
+  .preview__container--icons {
+    .iconBorder {
+      border: 0.2rem solid $tomato;
+
+      .iconP {
+        color: $dried-blood;
+      }
+    }
+  }
+}
+
+.greycolors {
+  .preview__container--info {
+    .personal-info {
+      border-left: 0.5rem solid $faded-orange;
+
+      .fullname {
+        color: $slate;
+      }
+    }
+  }
+
+  .preview__container--icons {
+    .iconBorder {
+      border: 0.2rem solid $light-grey-blue;
+
+      .iconP {
+        color: $slate;
       }
     }
   }
