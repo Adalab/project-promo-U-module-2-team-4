@@ -23,6 +23,19 @@ const previewGitHub = document.querySelector('.js-preview-GitHub');
 
 const btnDelete = document.querySelector('.js-btn-delete');
 
+//objetos
+
+const data = {
+  palette: 1,
+  name: '',
+  job: '',
+  phone: '',
+  email: '',
+  linkedin: '',
+  github: '',
+  photo: '',
+};
+
 //functions
 
 function openDesign() {
@@ -67,25 +80,33 @@ const fillDefaultName = () => (previewName.innerHTML = 'Nombre Apellido');
 
 const fillDefaultJob = () => (previewJob.innerHTML = 'Front-end developer');
 
-const fillName = () => (previewName.innerHTML = inputName.value);
+const fillName = () => {
+  previewName.innerHTML = inputName.value;
+  data.name = inputName.value;
+};
 
 const fillJob = () => {
   previewJob.innerHTML = inputJob.value;
+  data.job = inputJob.value;
 };
 
 const fillEmail = () => {
   previewEmail.href = `mailto:${inputEmail.value}`;
+  data.email = inputEmail.value;
 };
 
 const fillPhone = () => {
   previewPhone.href = `tel:${inputPhone.value}`;
+  data.phone = inputPhone.value;
 };
 const fillLinkedin = () => {
   previewLinkedin.href = `https://www.${inputLinkedin.value}/`;
+  data.linkedin = inputLinkedin.value;
 };
 
 const fillGitHub = () => {
   previewGitHub.href = `https://github.com/${inputGitHub.value}`;
+  data.github = inputGitHub.value;
 };
 //Que pasa si ponen @???
 
@@ -108,6 +129,7 @@ function handleInput() {
 }
 
 function handleClickDelete() {
+  //lleva a data a su estado inicial.
   inputName.value = '';
   inputJob.value = '';
   inputEmail.value = '';
