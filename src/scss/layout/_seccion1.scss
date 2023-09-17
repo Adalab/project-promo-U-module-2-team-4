@@ -1,6 +1,13 @@
 .section {
   @include dflex(row, center, center);
-  margin-top: 5vh;
+  padding-bottom: 1.7rem;
+
+  @media (min-width: 768px) {
+    padding-bottom: 3rem;
+  }
+  @media (min-width: 1024px) {
+    padding-bottom: 0rem;
+  }
 
   &__article {
     &--h1 {
@@ -25,6 +32,10 @@
 
       @media (min-width: 768px) {
         font-size: 1.6rem;
+        max-width: 37rem;
+      }
+
+      @media (min-width: 1024px) {
         max-width: 77rem;
       }
     }

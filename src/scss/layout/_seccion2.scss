@@ -1,8 +1,8 @@
 .sectionTwo {
   @include dflex(column, center, center);
-  gap: 5rem;
+
   @media (min-width: 768px) {
-    gap: 19rem;
+    gap: 15rem;
   }
   @media (min-width: 1024px) {
     gap: 5rem;
@@ -10,24 +10,25 @@
 
   &__list {
     width: 80%;
-    height: 7.38rem;
-    margin-top: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 3.8rem;
     border: 0.2rem solid rgba(225, 115, 52, 0.21);
     border-radius: 0.5rem;
     @include dflex(row, center, center);
     gap: 2.5rem;
+
     @media (min-width: 768px) {
-      width: 50%;
+      width: 40%;
       margin-top: 3rem;
+      gap: 3rem;
     }
 
     &__icon {
       list-style: none;
       @include dflex(column, center, none);
-      gap: 1rem;
+      gap: 1.5rem;
       text-align: center;
-      width: 6rem;
-      height: 4.8rem;
+      padding: 1.5rem 0rem;
 
       &--text {
         @include fontFieldset($font-size, $gunmetal);
@@ -46,8 +47,7 @@
     @include fontFieldset(1.6rem, white);
     font-weight: $semi-bold;
     text-transform: uppercase;
-    width: 12.9rem;
-    height: 4.2rem;
+    padding: 1rem 2rem;
     @include dflex(row, center, center);
     border-radius: 3rem;
   }
