@@ -12,7 +12,7 @@
     height: 53vh;
   }
   @media (min-width: 1024px) {
-    height: 50vh;
+    height: 51vh;
   }
 }
 
@@ -22,9 +22,7 @@
     flex-direction: row-reverse;
     background-image: linear-gradient(to bottom, $white-four, $white-two 9%);
     padding: 2rem 4rem;
-    height: 81vh;
-  }
-  @media (min-width: 1024px) {
+    min-height: 82vh;
     height: fit-content;
   }
 }
