@@ -2,11 +2,9 @@
   @include dflex(column, center, center);
 
   @media (min-width: 768px) {
-    gap: 15rem;
-  }
-  @media (min-width: 1024px) {
     gap: 5rem;
   }
+  
 
   &__list {
     width: 80%;
