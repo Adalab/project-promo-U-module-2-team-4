@@ -1,6 +1,5 @@
 .footer {
   @include dflex(column, center, center);
-  /*  height: 20vh; */
   gap: 1rem;
   border: solid 0.1rem $white-three;
   background-color: $white-two;
