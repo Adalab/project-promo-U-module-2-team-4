@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use strict';
 //queryselector
 const designLegend = document.querySelector('.js-design-legend');
@@ -167,7 +168,7 @@ function handleClickDelete() {
   previewLinkedin.href = '#';
   inputGitHub.value = '';
   previewGitHub.href = '#';
-  fillDefaultName();
+
   fillDefaultJob();
   colors('redcolors', 'greycolors', 'bluecolors'); // cambiar color por el predefinido.
   data.palette = 1;

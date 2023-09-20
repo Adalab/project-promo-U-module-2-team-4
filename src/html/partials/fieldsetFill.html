@@ -1,29 +1,70 @@
 <fieldset class="fieldset collapsed js-fill-form">
-  <include src="./legendFielset.html" jsclass="js-fill-legend" iconType="fa-regular" icon="fa-keyboard" title="Rellena">
+  <include
+    src="./legendFielset.html"
+    jsclass="js-fill-legend"
+    iconType="fa-regular"
+    icon="fa-keyboard"
+    title="Rellena"
+  >
   </include>
 
   <div class="fieldset__form">
     <label class="fieldset__form--label" for="fullName">Nombre completo</label>
-    <input class="fieldset__form--input js-input-name" type="text" name="fullName" placeholder=" Ej: Sally Jill" />
+    <input
+      class="fieldset__form--input js-input-name"
+      type="text"
+      name="fullName"
+      placeholder=" Ej: Sally Jill"
+    />
 
     <label class="fieldset__form--label" for="job">Puesto</label>
-    <input class="fieldset__form--input js-input-job" type="text" name="job" placeholder=" Ej: Front-end unicorn" />
-
-    <label class="fieldset__form--label" for="addImg">Imagen de perfil</label>
-    <input class="fieldset__form--button" type="button" name="addImg" value="Añadir Imagen" />
-
+    <input
+      class="fieldset__form--input js-input-job"
+      type="text"
+      name="job"
+      placeholder=" Ej: Front-end unicorn"
+    />
+    <label class="fieldset__form--label">Imagen de perfil</label>
+    <div class="fieldset__form--container">
+      <label for="addImg" class="fieldset__form--button">Añadir Imagen</label>
+      <input
+        class="hidden js__profile-upload-btn"
+        type="file"
+        name="addImg"
+        id="addImg"
+      />
+      <div class="miniPreview js__profile-preview"></div>
+    </div>
     <label class="fieldset__form--label" for="email">Email</label>
-    <input class="fieldset__form--input js-input-email" type="email" name="email"
-      placeholder=" Ej: sally-hill@gmail.com" />
+    <input
+      class="fieldset__form--input js-input-email"
+      type="email"
+      name="email"
+      placeholder=" Ej: sally-hill@gmail.com"
+    />
 
     <label class="fieldset__form--label" for="phone">Teléfono</label>
-    <input class="fieldset__form--input js-input-phone" type="tel" name="phone" placeholder=" Ej: 555-55-55-55" />
+    <input
+      class="fieldset__form--input js-input-phone"
+      type="tel"
+      name="phone"
+      placeholder=" Ej: 555-55-55-55"
+    />
 
     <label class="fieldset__form--label" for="linkedin">Linkedin</label>
-    <input class="fieldset__form--input js-input-linkedin" type="text" name="linkedin"
-      placeholder=" Ej: linkedin.com/in/sally.hill" />
+    <input
+      class="fieldset__form--input js-input-linkedin"
+      type="text"
+      name="linkedin"
+      placeholder=" Ej: linkedin.com/in/sally.hill"
+    />
 
     <label class="fieldset__form--label" for="github">Github</label>
-    <input class="fieldset__form--input js-input-GitHub" type="text" name="github" placeholder=" Ej: @sally-hill" />
+    <input
+      class="fieldset__form--input js-input-GitHub"
+      type="text"
+      name="github"
+      placeholder=" Ej: @sally-hill"
+    />
   </div>
 </fieldset>

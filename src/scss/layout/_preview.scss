@@ -52,13 +52,12 @@
       }
 
       &--img {
+        background-image: url('../images/andy_warhol_marilyn_monroe.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
         width: 24rem;
         height: 20rem;
-
-        .pic {
-          width: inherit;
-          height: inherit;
-        }
       }
 
       &--icons {

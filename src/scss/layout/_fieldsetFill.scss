@@ -34,6 +34,17 @@
     flex-direction: column;
     padding-bottom: 30px;
 
+    &--container {
+      @include dflex(row, flex-start, stretch);
+      gap: 20px;
+      .miniPreview {
+        background-position: center;
+        background-size: cover;
+        border: solid 1px $hospital-green;
+        height: 30px;
+        width: 30px;
+      }
+    }
     &--label {
       @include fontFieldset(1.4rem, $dark-green-blue);
       padding-bottom: 0.7rem;
@@ -48,6 +59,7 @@
       }
     }
     &--button {
+      @include dflex(row, center, center);
       margin-bottom: 2rem;
       height: 30px;
       width: 140px;
