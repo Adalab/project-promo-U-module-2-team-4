@@ -32,6 +32,9 @@ const inputOption3 = document.querySelector('.js-input-option3');
 
 const previewContainer = document.querySelector('.js-preview-container');
 
+const btnCreate = document.querySelector('.js-btn-create');
+const cardCreated = document.querySelector('.js-card-created');
+
 //objetos
 
 const data = {
@@ -72,17 +75,20 @@ function handleClickDesignLegend() {
   closeFill();
   closeShare();
   openDesign();
+  cardCreated.classList.add('hidden');
 }
 function handleClickFillLegend() {
   closeShare();
   closeDesign();
   openFill();
+  cardCreated.classList.add('hidden');
 }
 
 function handleClickShareLegend() {
   closeFill();
   closeDesign();
   openShare();
+  cardCreated.classList.add('hidden');
 }
 
 const fillDefaultName = () => (previewName.innerHTML = 'Nombre Apellido');
@@ -180,6 +186,12 @@ function handleClickDelete() {
   data.linkedin = '';
   data.photo = '';
   inputOption1.checked = true; //volver a ponerse el primer radio button como predefinido
+  cardCreated.classList.remove('hidden');
+}
+
+function handleClickCreate(event) {
+  event.preventDefault();
+  cardCreated.classList.remove('hidden');
 }
 
 //Eventos
@@ -194,3 +206,5 @@ fillLegend.addEventListener('click', handleClickFillLegend);
 shareLegend.addEventListener('click', handleClickShareLegend);
 
 designForm.addEventListener('input', handleInputColors);
+
+btnCreate.addEventListener('click', handleClickCreate);
