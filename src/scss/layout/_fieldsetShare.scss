@@ -18,10 +18,6 @@
       }
     }
 
-    &--button:hover {
-      background-color: $pale-grey;
-    }
-
     &--created {
       @include dflex(column, center, center);
       &_p {
@@ -55,4 +51,8 @@
 
 .link {
   text-decoration: none;
+}
+
+.activeButton {
+  background-color: $pale-grey;
 }

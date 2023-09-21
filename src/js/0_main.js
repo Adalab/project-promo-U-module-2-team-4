@@ -186,12 +186,13 @@ function handleClickDelete() {
   data.linkedin = '';
   data.photo = '';
   inputOption1.checked = true; //volver a ponerse el primer radio button como predefinido
-  cardCreated.classList.remove('hidden');
+  cardCreated.classList.add('hidden');
 }
 
 function handleClickCreate(event) {
   event.preventDefault();
   cardCreated.classList.remove('hidden');
+  btnCreate.classList.add('activeButton');
 }
 
 //Eventos

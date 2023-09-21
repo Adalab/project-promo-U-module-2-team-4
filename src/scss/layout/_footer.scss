@@ -1,7 +1,7 @@
 .footer {
   @include dflex(column, center, center);
   gap: 1rem;
-  border: solid 0.1rem $white-three;
+  border-top: solid 0.1rem $white-three;
   background-color: $white-two;
 
   @media all and (min-width: 768px) {
