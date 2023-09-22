@@ -175,6 +175,10 @@ function handleClickDelete() {
   inputGitHub.value = '';
   previewGitHub.href = '#';
 
+  profileImage.style.backgroundImage = '';
+  profileImage.classList.add('default-image');
+  profilePreview.style.backgroundImage = '';
+
   fillDefaultJob();
   colors('redcolors', 'greycolors', 'bluecolors'); // cambiar color por el predefinido.
   data.palette = 1;

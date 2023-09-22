@@ -4,10 +4,10 @@
   @media (min-width: 768px) {
     gap: 5rem;
   }
-  
 
   &__list {
     width: 80%;
+    max-width: 47rem;
     padding-top: 1rem;
     margin-bottom: 3.8rem;
     border: 0.2rem solid rgba(225, 115, 52, 0.21);
@@ -19,6 +19,9 @@
       width: 40%;
       margin-top: 3rem;
       gap: 3rem;
+    }
+    @media (min-width: 1024px) {
+      gap: 8rem;
     }
 
     &__icon {
