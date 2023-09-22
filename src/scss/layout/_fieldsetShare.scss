@@ -56,3 +56,9 @@
 .activeButton {
   background-color: $pale-grey;
 }
+
+.msjError {
+  @include fontFieldset(3rem, $rusty-red);
+  font-weight: bold;
+  text-align: center;
+}

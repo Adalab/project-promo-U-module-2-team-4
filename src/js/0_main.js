@@ -35,6 +35,8 @@ const previewContainer = document.querySelector('.js-preview-container');
 const btnCreate = document.querySelector('.js-btn-create');
 const cardCreated = document.querySelector('.js-card-created');
 
+const msjError = document.querySelector('.js-msj-error');
+
 //objetos
 
 const data = {
@@ -75,20 +77,17 @@ function handleClickDesignLegend() {
   closeFill();
   closeShare();
   openDesign();
-  cardCreated.classList.add('hidden');
 }
 function handleClickFillLegend() {
   closeShare();
   closeDesign();
   openFill();
-  cardCreated.classList.add('hidden');
 }
 
 function handleClickShareLegend() {
   closeFill();
   closeDesign();
   openShare();
-  cardCreated.classList.add('hidden');
 }
 
 const fillDefaultName = () => (previewName.innerHTML = 'Nombre Apellido');
@@ -191,14 +190,26 @@ function handleClickDelete() {
   data.photo = '';
   inputOption1.checked = true; //volver a ponerse el primer radio button como predefinido
   cardCreated.classList.add('hidden');
+  btnCreate.classList.remove('activeButton');
 }
 
 function handleClickCreate(event) {
   event.preventDefault();
-  cardCreated.classList.remove('hidden');
-  btnCreate.classList.add('activeButton');
+  if (
+    inputName.value === '' ||
+    inputJob.value === '' ||
+    inputEmail.value === '' ||
+    inputPhone.value === '' ||
+    inputLinkedin.value === '' ||
+    inputGitHub.value === ''
+  ) {
+    msjError.innerHTML =
+      '¡¡RELLENA TU PUTA TARJETA ANTES DE COMPARTIRLA, GILIPOLLAS!! ;)';
+  } else {
+    cardCreated.classList.remove('hidden');
+    btnCreate.classList.add('activeButton');
+  }
 }
-
 //Eventos
 fillForm.addEventListener('input', handleInputFill);
 
