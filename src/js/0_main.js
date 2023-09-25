@@ -208,6 +208,7 @@ function handleClickCreate(event) {
   } else {
     cardCreated.classList.remove('hidden');
     btnCreate.classList.add('activeButton');
+    msjError.innerHTML = '';
   }
 }
 //Eventos
