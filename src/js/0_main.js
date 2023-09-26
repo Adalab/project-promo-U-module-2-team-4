@@ -22,7 +22,6 @@ const previewLinkedin = document.querySelector('.js-preview-linkedin');
 const inputGitHub = document.querySelector('.js-input-GitHub');
 const previewGitHub = document.querySelector('.js-preview-GitHub');
 
-const btnDelete = document.querySelector('.js-btn-delete');
 
 const inputOption1 = document.querySelector('.js-input-option1');
 
@@ -161,37 +160,6 @@ function handleInputColors(event) {
     data.palette = 3;
   }
 }
-function handleClickDelete() {
-  //lleva a data a su estado inicial.
-  inputName.value = '';
-  inputJob.value = '';
-  inputEmail.value = '';
-  previewEmail.href = '#';
-  inputPhone.value = '';
-  previewPhone.href = '#';
-  inputLinkedin.value = '';
-  previewLinkedin.href = '#';
-  inputGitHub.value = '';
-  previewGitHub.href = '#';
-
-  profileImage.style.backgroundImage = '';
-  profileImage.classList.add('default-image');
-  profilePreview.style.backgroundImage = '';
-
-  fillDefaultJob();
-  colors('redcolors', 'greycolors', 'bluecolors'); // cambiar color por el predefinido.
-  data.palette = 1;
-  data.name = '';
-  data.job = '';
-  data.phone = '';
-  data.email = '';
-  data.github = '';
-  data.linkedin = '';
-  data.photo = '';
-  inputOption1.checked = true; //volver a ponerse el primer radio button como predefinido
-  cardCreated.classList.add('hidden');
-  btnCreate.classList.remove('activeButton');
-}
 
 function handleClickCreate(event) {
   event.preventDefault();
@@ -214,7 +182,7 @@ function handleClickCreate(event) {
 //Eventos
 fillForm.addEventListener('input', handleInputFill);
 
-btnDelete.addEventListener('click', handleClickDelete);
+
 
 designLegend.addEventListener('click', handleClickDesignLegend);
 
