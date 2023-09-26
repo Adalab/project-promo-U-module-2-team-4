@@ -8,7 +8,6 @@ const shareLegend = document.querySelector('.js-share-legend');
 const designForm = document.querySelector('.js-design-form');
 const fillForm = document.querySelector('.js-fill-form');
 const shareForm = document.querySelector('.js-share-form');
-const form = document.querySelector('.js-form');
 
 const inputName = document.querySelector('.js-input-name');
 const previewName = document.querySelector('.js-preview-name');
@@ -23,7 +22,6 @@ const previewLinkedin = document.querySelector('.js-preview-linkedin');
 const inputGitHub = document.querySelector('.js-input-GitHub');
 const previewGitHub = document.querySelector('.js-preview-GitHub');
 
-
 const inputOption1 = document.querySelector('.js-input-option1');
 
 const inputOption2 = document.querySelector('.js-input-option2');
@@ -31,12 +29,6 @@ const inputOption2 = document.querySelector('.js-input-option2');
 const inputOption3 = document.querySelector('.js-input-option3');
 
 const previewContainer = document.querySelector('.js-preview-container');
-
-const btnCreate = document.querySelector('.js-btn-create');
-const cardCreated = document.querySelector('.js-card-created');
-const cardLink = document.querySelector('.js-card-link');
-const linkTwitter = document.querySelector('.js-link-twitter');
-const msjError = document.querySelector('.js-msj-error');
 
 //objetos
 
@@ -163,38 +155,8 @@ function handleInputColors(event) {
   }
 }
 
-function handleClickCreate(event) {
-  event.preventDefault();
-  fetch('https://dev.adalab.es/api/card/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.success) {
-        cardCreated.classList.remove('hidden');
-        btnCreate.classList.add('activeButton');
-        msjError.innerHTML = '';
-        cardLink.innerHTML = data.cardURL;
-        cardLink.href = data.cardURL;
-        linkTwitter.href = `https://twitter.com/intent/tweet?text=He%20creado%20esta%20tarjeta%20con%20AwesomeCards%20,%20puedes%20verla%20en%20este%20link%20:&url=${data.cardURL}`;
-      } else {
-        msjError.innerHTML =
-          '¡¡RELLENA TU PUTA TARJETA ANTES DE COMPARTIRLA, GILIPOLLAS!! ;)';
-
-        if (data.error === 'Database error: ER_DATA_TOO_LONG') {
-          msjError.innerHTML = 'Hay algun error, revisa el formulario';
-        }
-
-        console.log(data);
-      }
-    });
-}
 //Eventos
 fillForm.addEventListener('input', handleInputFill);
-
-
 
 designLegend.addEventListener('click', handleClickDesignLegend);
 
@@ -203,9 +165,3 @@ fillLegend.addEventListener('click', handleClickFillLegend);
 shareLegend.addEventListener('click', handleClickShareLegend);
 
 designForm.addEventListener('input', handleInputColors);
-
-btnCreate.addEventListener('click', handleClickCreate);
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-});

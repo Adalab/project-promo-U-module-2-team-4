@@ -112,3 +112,10 @@
 .default-image {
   background-image: url('../images/andy_warhol_marilyn_monroe.jpg');
 }
+
+.inputError {
+ 
+  @include fontFieldset(1.3rem, $rusty-red);
+  margin-bottom: 0.8rem;
+
+}

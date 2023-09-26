@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use strict';
 const btnDelete = document.querySelector('.js-btn-delete');
 
@@ -31,6 +32,8 @@ function handleClickDelete() {
   inputOption1.checked = true; //volver a ponerse el primer radio button como predefinido
   cardCreated.classList.add('hidden');
   btnCreate.classList.remove('activeButton');
+
+  msjError.innerHTML = '';
 }
 
 btnDelete.addEventListener('click', handleClickDelete);

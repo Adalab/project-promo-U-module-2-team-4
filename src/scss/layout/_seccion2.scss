@@ -10,7 +10,7 @@
     max-width: 47rem;
     padding-top: 1rem;
     margin-bottom: 3.8rem;
-    border: 0.2rem solid rgba(225, 115, 52, 0.21);
+    border: 0.2rem solid $pink;
     border-radius: 0.5rem;
     @include dflex(row, center, center);
     gap: 2.5rem;
@@ -42,8 +42,8 @@
   }
 
   &__button {
-    border: 0.1rem solid $dirty-blue;
-    background-color: $dirty-blue;
+    border: 0.1rem solid $lile;
+    background-color: $lile;
     text-decoration: none;
     @include fontFieldset(1.6rem, white);
     font-weight: $semi-bold;
