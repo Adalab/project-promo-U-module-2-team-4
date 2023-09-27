@@ -1,208 +1,248 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Adalab Web Starter Kit</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="./assets/css/main.css" />
-  <link rel="icon" href="./assets/images/favicon.png" />
-  <script src="https://kit.fontawesome.com/bcc6ce623e.js" crossorigin="anonymous"></script>
-</head>
-
-<body class="bodyCP">
-  <header class="headerCP">
-    <img
-      class="img"
-      src="./assets/images/logo-awesome-profile-cards.svg"
-      alt=""
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adalab Web Starter Kit</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
     />
-  </header>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="icon" href="./assets/images/justRainbow.png" />
+    <script
+      src="https://kit.fontawesome.com/bcc6ce623e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-  <main class="mainCP">
-    <section class="sectionP">
-      <div class="preview">
-        <button class="preview__reset js-btn-delete">
-          <i class="fa-regular fa-trash-can fa-lg"></i>Reset
-        </button>
+  <body class="bodyCP">
+    <header class="headerCP">
+      <a href="index.html"><img class="img" src="./assets/images/option2.png" alt="Awesome Cards" /></a>
+    </header>
 
-        <div class="preview__container js-preview-container bluecolors">
-          <div class="preview__container--info">
-            <div class="personal-info">
-              <p class="fullname js-preview-name">Nombre Apellido</p>
-              <p class="job js-preview-job">Front-end developer</p>
+    <main class="mainCP">
+      <section class="sectionP">
+        <div class="preview">
+          <button class="preview__reset js-btn-delete">
+            <i class="fa-regular fa-trash-can fa-lg"></i>Reset
+          </button>
+
+          <div class="preview__container js-preview-container bluecolors">
+            <div class="preview__container--info">
+              <div class="personal-info">
+                <p class="fullname js-preview-name">Nombre Apellido</p>
+                <p class="job js-preview-job">Front-end developer</p>
+              </div>
             </div>
+
+            <div class="preview__container--img js__profile-image pic"></div>
+
+            <ul class="preview__container--icons">
+              <li class="iconBorder">
+                <a target="_blank" class="iconP js-preview-phone" href="#"
+                  ><i class="fa-solid fa-mobile-screen-button fa-2xl"></i
+                ></a>
+              </li>
+
+              <li class="iconBorder">
+                <a target="_blank" class="iconP js-preview-email" href="#"
+                  ><i class="fa-regular fa-envelope fa-2xl"></i
+                ></a>
+              </li>
+
+              <li class="iconBorder">
+                <a target="_blank" class="iconP js-preview-linkedin" href="#"
+                  ><i class="fa-brands fa-linkedin-in fa-2xl"></i
+                ></a>
+              </li>
+
+              <li class="iconBorder">
+                <a target="_blank" class="iconP js-preview-GitHub" href="#"
+                  ><i class="fa-brands fa-github-alt fa-2xl"></i
+                ></a>
+              </li>
+            </ul>
           </div>
-
-          <figure class="preview__container--img">
-            <img
-              class="pic"
-              src="./assets/images/andy_warhol_marilyn_monroe.jpg"
-              alt=""
-            />
-          </figure>
-
-          <ul class="preview__container--icons">
-            <li class="iconBorder">
-              <a target="_blank" class="iconP js-preview-phone" href="#"
-                ><i class="fa-solid fa-mobile-screen-button fa-2xl"></i
-              ></a>
-            </li>
-
-            <li class="iconBorder">
-              <a target="_blank" class="iconP js-preview-email" href="#"
-                ><i class="fa-regular fa-envelope fa-2xl"></i
-              ></a>
-            </li>
-
-            <li class="iconBorder">
-              <a target="_blank" class="iconP js-preview-linkedin" href="#"
-                ><i class="fa-brands fa-linkedin-in fa-2xl"></i
-              ></a>
-            </li>
-
-            <li class="iconBorder">
-              <a target="_blank" class="iconP js-preview-GitHub" href="#"
-                ><i class="fa-brands fa-github-alt fa-2xl"></i
-              ></a>
-            </li>
-          </ul>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="sectionF">
-      <form action="">
-        <fieldset class="fieldset js-design-form">
-          <legend class="fieldset__legend js-design-legend">
-            <h2 class="fieldset__legend--title">
-              <span class="fa-regular fa-object-ungroup fieldset__legend--title--icon"></span>Diseña
-            </h2>
-            <span class="fa-solid fa-chevron-up fa-2xl fieldset__legend--arrow"></span>
-          </legend>
-
-
-          <div class="design">
-            <p class="colortext">colores</p>
-            <div>
-              <div class="color1">
-                <label for="bluecolors"
-                  ><input
-                    class="option1 js-input-option1"
-                    type="radio"
-                    value="chooseseat"
-                    name="option"
-                    checked
-                  />
-                </label>
-                <div class="option1color1"></div>
-                <div class="option1color2"></div>
-                <div class="option1color3"></div>
-              </div>
-              <div class="color2">
-                <label for="redcolors"
-                  ><input
-                    class="option2 js-input-option2"
-                    type="radio"
-                    value="chooseseat"
-                    name="option"
-                /></label>
-                <div class="option2color1"></div>
-                <div class="option2color2"></div>
-                <div class="option2color3"></div>
-              </div>
-              <div class="color3">
-                <label for="greycolors"
-                  ><input
-                    class="option3 js-input-option3"
-                    type="radio"
-                    value="chooseseat"
-                    name="option"
-                /></label>
-                <div class="option3color1"></div>
-                <div class="option3color2"></div>
-                <div class="option3color3"></div>
-              </div>
-            </div>
-          </div>
-        </fieldset>
-
-        <fieldset class="fieldset collapsed js-fill-form">
-          <legend class="fieldset__legend js-fill-legend">
-            <h2 class="fieldset__legend--title">
-              <span class="fa-regular fa-keyboard fieldset__legend--title--icon"></span>Rellena
-            </h2>
-            <span class="fa-solid fa-chevron-up fa-2xl fieldset__legend--arrow"></span>
-          </legend>
+      <section class="sectionF js-form">
+        <form action="">
+          <fieldset class="fieldset js-design-form">
+            <legend class="fieldset__legend js-design-legend">
+              <h2 class="fieldset__legend--title">
+                <span class="fa-solid fa-brush fieldset__legend--title--icon"></span>Diseña
+              </h2>
+              <span class="fa-solid fa-chevron-up fa-2xl fieldset__legend--arrow"></span>
+            </legend>
 
 
-          <div class="fieldset__form">
-            <label class="fieldset__form--label" for="fullName">Nombre completo</label>
-            <input class="fieldset__form--input js-input-name" type="text" name="fullName" placeholder=" Ej: Sally Jill" />
-
-            <label class="fieldset__form--label" for="job">Puesto</label>
-            <input class="fieldset__form--input js-input-job" type="text" name="job" placeholder=" Ej: Front-end unicorn" />
-
-            <label class="fieldset__form--label" for="addImg">Imagen de perfil</label>
-            <input class="fieldset__form--button" type="button" name="addImg" value="Añadir Imagen" />
-
-            <label class="fieldset__form--label" for="email">Email</label>
-            <input class="fieldset__form--input js-input-email" type="email" name="email"
-              placeholder=" Ej: sally-hill@gmail.com" />
-
-            <label class="fieldset__form--label" for="phone">Teléfono</label>
-            <input class="fieldset__form--input js-input-phone" type="tel" name="phone" placeholder=" Ej: 555-55-55-55" />
-
-            <label class="fieldset__form--label" for="linkedin">Linkedin</label>
-            <input class="fieldset__form--input js-input-linkedin" type="text" name="linkedin"
-              placeholder=" Ej: linkedin.com/in/sally.hill" />
-
-            <label class="fieldset__form--label" for="github">Github</label>
-            <input class="fieldset__form--input js-input-GitHub" type="text" name="github" placeholder=" Ej: @sally-hill" />
-          </div>
-        </fieldset>
-        <fieldset class="fieldset fieldset3 collapsed js-share-form">
-          <legend class="fieldset__legend js-share-legend">
-            <h2 class="fieldset__legend--title">
-              <span class="fa-solid  fa-share-nodes fieldset__legend--title--icon"></span>Comparte
-            </h2>
-            <span class="fa-solid fa-chevron-up fa-2xl fieldset__legend--arrow"></span>
-          </legend>
-
-
-          <div class="fieldset3__container ">
-            <div class="fieldset3__container--button">
-              <i class="fa-regular fa-address-card"></i
-              ><a href="" class="fieldset3__container--button_a">crear tarjeta</a>
-            </div>
-            <div class="fieldset3__container--created">
-              <p class="fieldset3__container--created_p">La tarjeta ha sido creada:</p>
-              <a href="" class="fieldset3__container--created_link"
-                >https://awesome-profile-card.com?id=A456DF001</a
-              >
-              <div class="fieldset3__container--created_button">
-                <i class="fa-brands fa-x-twitter"></i> Compartir en twitter
+            <div class="design">
+              <p class="colortext">colores</p>
+              <div>
+                <div class="color1">
+                  <label for="bluecolors"
+                    ><input
+                      class="option1 js-input-option1"
+                      type="radio"
+                      value="chooseseat"
+                      name="option"
+                      checked
+                    />
+                  </label>
+                  <div class="option1color1"></div>
+                  <div class="option1color2"></div>
+                  <div class="option1color3"></div>
+                </div>
+                <div class="color2">
+                  <label for="redcolors"
+                    ><input
+                      class="option2 js-input-option2"
+                      type="radio"
+                      value="chooseseat"
+                      name="option"
+                  /></label>
+                  <div class="option2color1"></div>
+                  <div class="option2color2"></div>
+                  <div class="option2color3"></div>
+                </div>
+                <div class="color3">
+                  <label for="greycolors"
+                    ><input
+                      class="option3 js-input-option3"
+                      type="radio"
+                      value="chooseseat"
+                      name="option"
+                  /></label>
+                  <div class="option3color1"></div>
+                  <div class="option3color2"></div>
+                  <div class="option3color3"></div>
+                </div>
               </div>
             </div>
-          </div>
-        </fieldset>
+          </fieldset>
 
-      </form>
-    </section>
+          <fieldset class="fieldset collapsed js-fill-form">
+            <legend class="fieldset__legend js-fill-legend">
+              <h2 class="fieldset__legend--title">
+                <span class="fa-solid  fa-feather fieldset__legend--title--icon"></span>Rellena
+              </h2>
+              <span class="fa-solid fa-chevron-up fa-2xl fieldset__legend--arrow"></span>
+            </legend>
 
-  </main>
-  <footer class="footer">
-      <p class=" copy">Awesome profile-cards &copy2018 </p>
+
+            <div class="fieldset__form">
+              <label class="fieldset__form--label" for="fullName">Nombre completo</label>
+              <input
+                class="fieldset__form--input js-input-name"
+                type="text"
+                name="fullName"
+                placeholder=" Ej: Sally Jill"
+              />
+              <p class="js-err-name"></p>
+
+              <label class="fieldset__form--label" for="job">Puesto</label>
+              <input
+                class="fieldset__form--input js-input-job"
+                type="text"
+                name="job"
+                placeholder=" Ej: Front-end unicorn"
+              />
+              <p class="js-err-job"></p>
+              <label class="fieldset__form--label">Imagen de perfil</label>
+              <div class="fieldset__form--container">
+                <label for="addImg" class="fieldset__form--button">Añadir Imagen</label>
+                <input
+                  class="hidden js__profile-upload-btn"
+                  type="file"
+                  name="addImg"
+                  id="addImg"
+                />
+                <div class="miniPreview js__profile-preview"></div>
+              </div>
+              <p class="inputError js-err-img"></p>
+              <label class="fieldset__form--label" for="email">Email</label>
+              <input
+                class="fieldset__form--input js-input-email"
+                type="email"
+                name="email"
+                placeholder=" Ej: sally-hill@gmail.com"
+              />
+              <p class="js-err-email"></p>
+
+              <label class="fieldset__form--label" for="phone">Teléfono</label>
+              <input
+                class="fieldset__form--input js-input-phone"
+                type="tel"
+                name="phone"
+                placeholder=" Ej: 555-55-55-55"
+              />
+              <p class="js-err-phone"></p>
+
+              <label class="fieldset__form--label" for="linkedin">Linkedin</label>
+              <input
+                class="fieldset__form--input js-input-linkedin"
+                type="text"
+                name="linkedin"
+                placeholder=" Ej: sally.hill"
+              />
+              <p class="js-err-linkedin"></p>
+
+              <label class="fieldset__form--label" for="github">Github</label>
+              <input
+                class="fieldset__form--input js-input-GitHub"
+                type="text"
+                name="github"
+                placeholder=" Ej: @sally-hill"
+              />
+              <p class="js-err-github"></p>
+            </div>
+          </fieldset>
+
+          <fieldset class="fieldset fieldset3 collapsed js-share-form">
+            <legend class="fieldset__legend js-share-legend">
+              <h2 class="fieldset__legend--title">
+                <span class="fa-solid  fa-handshake-simple fieldset__legend--title--icon"></span>Comparte
+              </h2>
+              <span class="fa-solid fa-chevron-up fa-2xl fieldset__legend--arrow"></span>
+            </legend>
+
+
+            <div class="fieldset3__container">
+              <button type="submit" class="fieldset3__container--button js-btn-create">
+                <i class="fa-regular fa-address-card"></i
+                ><a href="" class="fieldset3__container--button_a">crear tarjeta</a>
+              </button>
+              <p class="js-msj-error msjError"></p>
+
+              <div class="fieldset3__container--created hidden js-card-created">
+                <p class="fieldset3__container--created_p">La tarjeta ha sido creada:</p>
+                <a
+                  href=""
+                  class="fieldset3__container--created_link js-card-link"
+                  target="_blank"
+                  >https://awesome-profile-card.com?id=A456DF001</a
+                >
+                <a class="link js-link-twitter" href="#" target="_blank">
+                  <div class="fieldset3__container--created_button">
+                    Compartir en <i class="fa-brands fa-x-twitter"></i></div
+                ></a>
+              </div>
+            </div>
+          </fieldset>
+
+        </form>
+      </section>
+
+    </main>
+    <footer class="footer footerCP">
+      <p class="copy">Awesome profile-cards &copy2023</p>
       <div class="imagesLogo">
-          <img src="./assets/images/logo-adalab.png" class="logo" alt="logo adalab">
+        <img src="./assets/images/justRainbow.png" class="logo" alt="logo grupo 4" />
       </div>
+    </footer>
 
-
-  </footer>
-  <script src="./assets/js/main.js"></script>
-</body>
-
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>
