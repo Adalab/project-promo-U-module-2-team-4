@@ -110,12 +110,10 @@
 }
 
 .default-image {
-  background-image: url('../images/andy_warhol_marilyn_monroe.jpg');
+  background-image: url('../images/unicorn.png');
 }
 
 .inputError {
- 
   @include fontFieldset(1.3rem, $rusty-red);
   margin-bottom: 0.8rem;
-
 }

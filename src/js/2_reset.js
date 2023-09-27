@@ -36,6 +36,7 @@ function handleClickDelete() {
   fillDefaultName();
 
   msjError.innerHTML = '';
+  localStorage.removeItem('dataForm');
 }
 
 btnDelete.addEventListener('click', handleClickDelete);

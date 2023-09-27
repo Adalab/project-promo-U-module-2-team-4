@@ -13,16 +13,16 @@
 
   .preview {
     &__reset {
-      border: 0.1rem solid $white-two;
       border-radius: 2rem;
       @include dflex(row, center, center);
       gap: 0.5rem;
       padding: 0.5rem 1rem;
       text-transform: uppercase;
-      background-color: transparent;
-      @include fontFieldset(1.2rem, $gunmetal);
+      background-color: $primary-color;
+      @include fontFieldset(1.2rem, white);
       margin-bottom: 3rem;
       cursor: pointer;
+      font-weight: 900;
     }
 
     &__container {
@@ -60,7 +60,7 @@
       }
 
       .pic {
-        background-image: url('../images/andy_warhol_marilyn_monroe.jpg');
+        background-image: url('../images/unicorn.png');
       }
 
       &--icons {
