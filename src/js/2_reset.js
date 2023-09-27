@@ -33,6 +33,8 @@ function handleClickDelete() {
   cardCreated.classList.add('hidden');
   btnCreate.classList.remove('activeButton');
 
+  fillDefaultName();
+
   msjError.innerHTML = '';
 }
 
