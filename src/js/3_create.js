@@ -29,7 +29,7 @@ function validateFills() {
   const reEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const rePhone = /^\+?(\d.*){3,}$/;
   const reGitHub = /^@[\w]+$/;
-  const reLink = /^[\w.]+$/;
+  const reLink = /^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ\s.-]+$/;
 
   const isNameValid = validations(reText, inputNameVal, errorName);
   const isJobValid = validations(reText, inputJobVal, errorJob);
