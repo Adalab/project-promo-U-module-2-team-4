@@ -18,20 +18,63 @@ const errorGithub = document.querySelector('.js-err-github');
 const inputsStored = JSON.parse(localStorage.getItem('dataForm'));
 const urlPage = 'http://beta.adalab.es/project-promo-U-module-2-team-4/';
 
-function validateEmail(email) {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(email);
+function validateFills() {
+  const inputEmailVal = inputEmail.value;
+  const inputNameVal = inputName.value;
+  const inputJobVal = inputJob.value;
+  const inputPhoneVal = inputPhone.value;
+  const inputGitVal = inputGitHub.value;
+  const inputLinkVal = inputLinkedin.value;
+  const reText = /^[a-zA-ZÀ-ÖØ-öø-ÿ' -]+(\s[a-zA-ZÀ-ÖØ-öø-ÿ' -]+){0,4}$/;
+  const reEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const rePhone = /^\+?(\d.*){3,}$/;
+  const reGitHub = /^@[\w]+$/;
+  const reLink = /^[\w.]+$/;
+
+  const isNameValid = validations(reText, inputNameVal, errorName);
+  const isJobValid = validations(reText, inputJobVal, errorJob);
+  const isEmailValid = validations(reEmail, inputEmailVal, errorEmail);
+  const isPhoneValid = validatePhone(rePhone, inputPhoneVal, errorPhone);
+  const isGitValid = validations(reGitHub, inputGitVal, errorGithub);
+  const isLinkedinValid = validations(reLink, inputLinkVal, errorLinkedin);
+
+  return (
+    isNameValid &&
+    isJobValid &&
+    isEmailValid &&
+    isPhoneValid &&
+    isGitValid &&
+    isLinkedinValid
+  );
 }
 
-function validateFills(jsonResponse) {
-  if (jsonResponse.error === 'Database error: ER_DATA_TOO_LONG') {
-    errorImg.innerHTML =
-      'La imagen es demasiado grande. Prueba con una de 40kb o menos.';
+function validatePhone(regex, input, error) {
+  if (regex.test(input)) {
+    error.innerHTML = '';
+    return true;
+  } else if (input === '') {
+    error.innerHTML = '';
+    return true;
+  } else {
+    error.innerHTML = 'El formato no es válido.';
+    return false;
   }
-  if (validateEmail(inputEmail.value)) {
-    errorEmail.innerHTML = '';
-  }else{
-    errorEmail.innerHTML = 'Formato no válido.';
+}
+
+function validations(regex, input, error) {
+  if (regex.test(input)) {
+    error.innerHTML = '';
+    return true;
+  } else if (input === '') {
+    msjError.innerHTML =
+      'Rellena todos los campos del formulario. Comprueba que son correctos.';
+    error.innerHTML = 'Tienes que rellenar el campo.';
+
+    return false;
+  } else {
+    error.innerHTML = 'El formato no es válido.';
+
+    return false;
   }
 }
 
@@ -65,31 +108,42 @@ formStored();
 
 function handleClickCreate(event) {
   event.preventDefault();
-  fetch('https://dev.adalab.es/api/card/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((jsonResponse) => {
-      if (!jsonResponse.success) {
-        msjError.innerHTML =
-          'Rellena todos los campos del formulario. Comprueba que son correctos.';
-        validateFills(jsonResponse);
-        console.log(data);
-      } else {
-        localStorage.setItem('dataForm', JSON.stringify(data));
-        cardCreated.classList.remove('hidden');
-        btnCreate.classList.add('activeButton');
-        errorImg.innerHTML = '';
-        errorEmail.innerHTML = '';
-        msjError.innerHTML = '';
-        cardLink.innerHTML = jsonResponse.cardURL;
-        cardLink.href = jsonResponse.cardURL;
-        linkTwitter.href = `https://twitter.com/intent/tweet?text=¡Esta%20es%20mi%20tarjeta%20digital!%20Puedes%20verla%20en%20${jsonResponse.cardURL}%20¡Crea%20la%20tuya%20en:%20${urlPage}!%20&hashtags=AwesomeCards,MakeContacts,MakeFuture`;
-      }
-    });
+  if (validateFills()) {
+    fetch('https://dev.adalab.es/api/card/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((jsonResponse) => {
+        if (jsonResponse.success) {
+          console.log(jsonResponse);
+          localStorage.setItem('dataForm', JSON.stringify(data));
+          cardCreated.classList.remove('hidden');
+          btnCreate.classList.add('activeButton');
+          errorImg.innerHTML = '';
+          errorEmail.innerHTML = '';
+          msjError.innerHTML = '';
+          cardLink.innerHTML = jsonResponse.cardURL;
+          cardLink.href = jsonResponse.cardURL;
+          linkTwitter.href = `https://twitter.com/intent/tweet?text=¡Esta%20es%20mi%20tarjeta%20digital!%20Puedes%20verla%20en%20${jsonResponse.cardURL}%20¡Crea%20la%20tuya%20en:%20${urlPage}!%20&hashtags=AwesomeCards,MakeContacts,MakeFuture`;
+        } else if (jsonResponse.error === 'Database error: ER_DATA_TOO_LONG') {
+          errorImg.innerHTML =
+            'La imagen es demasiado grande. Prueba con una de 40kb o menos.';
+          msjError.innerHTML =
+            'Rellena todos los campos del formulario. Comprueba que son correctos.';
+        } else {
+          errorImg.innerHTML = 'Tienes que añadir una imagen.';
+          msjError.innerHTML =
+            'Rellena todos los campos del formulario. Comprueba que son correctos.';
+        }
+      });
+  } else {
+    msjError.innerHTML =
+      'Rellena todos los campos del formulario. Comprueba que son correctos.';
+  }
 }
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 });

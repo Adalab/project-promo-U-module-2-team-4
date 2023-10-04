@@ -4,6 +4,9 @@
   @media (min-width: 768px) {
     gap: 5rem;
   }
+  @media (max-height: 700px) {
+    gap: 1rem;
+  }
 
   &__list {
     width: 80%;

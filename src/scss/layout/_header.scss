@@ -13,6 +13,12 @@
     .img {
       max-width: 300px;
       margin-top: 9.5rem;
+      @media (min-width: 768px) {
+        max-width: 400px;
+      }
+      @media (min-width: 1024px) {
+        max-width: 500px;
+      }
     }
   }
 }
@@ -22,7 +28,6 @@
   @include dflex(row, center, center);
   @media (min-width: 768px) {
     justify-content: flex-start;
-    
   }
   .img {
     width: 200px;

@@ -36,6 +36,15 @@ function handleClickDelete() {
   fillDefaultName();
 
   msjError.innerHTML = '';
+
+  errorName.innerHTML = '';
+  errorJob.innerHTML = '';
+  errorImg.innerHTML = '';
+  errorEmail.innerHTML = '';
+  errorPhone.innerHTML = '';
+  errorLinkedin.innerHTML = '';
+  errorGithub.innerHTML = '';
+
   localStorage.removeItem('dataForm');
 }
 
