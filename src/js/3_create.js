@@ -16,10 +16,24 @@ const errorLinkedin = document.querySelector('.js-err-linkedin');
 const errorGithub = document.querySelector('.js-err-github');
 
 const inputsStored = JSON.parse(localStorage.getItem('dataForm'));
-// function validateEmail(email) {
-//   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//   return re.test(email);
-//}
+const urlPage = 'http://beta.adalab.es/project-promo-U-module-2-team-4/';
+
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
+function validateFills(jsonResponse) {
+  if (jsonResponse.error === 'Database error: ER_DATA_TOO_LONG') {
+    errorImg.innerHTML =
+      'La imagen es demasiado grande. Prueba con una de 40kb o menos.';
+  }
+  if (validateEmail(inputEmail.value)) {
+    errorEmail.innerHTML = '';
+  }else{
+    errorEmail.innerHTML = 'Formato no válido.';
+  }
+}
 
 function formStored() {
   if (inputsStored) {
@@ -58,30 +72,21 @@ function handleClickCreate(event) {
   })
     .then((response) => response.json())
     .then((jsonResponse) => {
-      if (jsonResponse.success) {
+      if (!jsonResponse.success) {
+        msjError.innerHTML =
+          'Rellena todos los campos del formulario. Comprueba que son correctos.';
+        validateFills(jsonResponse);
+        console.log(data);
+      } else {
         localStorage.setItem('dataForm', JSON.stringify(data));
         cardCreated.classList.remove('hidden');
         btnCreate.classList.add('activeButton');
         errorImg.innerHTML = '';
+        errorEmail.innerHTML = '';
         msjError.innerHTML = '';
         cardLink.innerHTML = jsonResponse.cardURL;
         cardLink.href = jsonResponse.cardURL;
-        linkTwitter.href = `https://twitter.com/intent/tweet?text=He%20creado%20esta%20tarjeta%20con%20AwesomeCards%20,%20puedes%20verla%20en%20este%20link%20:&url=${jsonResponse.cardURL}`;
-      } else {
-        msjError.innerHTML =
-          'Rellena todos los campos del formulario. Comprueba que son correctos.';
-
-        if (jsonResponse.error === 'Database error: ER_DATA_TOO_LONG') {
-          errorImg.innerHTML =
-            'La imagen es demasiado grande. Prueba con una de 40kb o menos.';
-        }
-
-        //else if (!validateEmail(inputEmail.value)) {
-        //   errorEmail.innerHTML = 'Formato no válido.';
-        // } else if (!validateEmail(inputEmail.value)) {
-        //     errorEmail.innerHTML = 'Formato no válido.';
-        //   }
-        console.log(data);
+        linkTwitter.href = `https://twitter.com/intent/tweet?text=¡Esta%20es%20mi%20tarjeta%20digital!%20Puedes%20verla%20en%20${jsonResponse.cardURL}%20¡Crea%20la%20tuya%20en:%20${urlPage}!%20&hashtags=AwesomeCards,MakeContacts,MakeFuture`;
       }
     });
 }

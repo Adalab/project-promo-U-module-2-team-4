@@ -43,20 +43,23 @@
         border: solid 1px $hospital-green;
         height: 30px;
         width: 30px;
+        background-image: url('../images/unicorn.png');
       }
     }
     &--label {
       @include fontFieldset(1.4rem, $dark-green-blue);
       padding-bottom: 0.7rem;
+      color: $primary-color;
     }
     &--input {
       margin-bottom: 2rem;
-      border: solid 1px $hospital-green;
+      border: solid 1px $lile;
       @include fontFieldset(1.4rem, $dark-green-blue);
       padding: 5px;
       ::placeholder {
         color: $pinkish-grey;
       }
+      
     }
     &--button {
       @include dflex(row, center, center);
